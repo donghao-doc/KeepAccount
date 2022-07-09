@@ -1,5 +1,8 @@
 <template>
-  <div>detail-view</div>
+  <div>
+    detail-view
+    <GlobalNav></GlobalNav>
+  </div>
 </template>
 
 <script>

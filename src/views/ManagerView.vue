@@ -1,5 +1,8 @@
 <template>
-  <div>manager-view</div>
+  <div>
+    manager-view
+    <GlobalNav></GlobalNav>
+  </div>
 </template>
 
 <script>

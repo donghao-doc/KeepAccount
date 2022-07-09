@@ -6,6 +6,9 @@ import store from './store';
 
 Vue.config.productionTip = false;
 
+import GlobalNav from '@/components/GlobalNav.vue';
+Vue.component(GlobalNav.name, GlobalNav)
+
 new Vue({
   router,
   store,

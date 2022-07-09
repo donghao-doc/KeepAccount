@@ -1,5 +1,8 @@
 <template>
-  <div>chart-view</div>
+  <div>
+    chart-view
+    <GlobalNav></GlobalNav>
+  </div>
 </template>
 
 <script>
