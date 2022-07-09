@@ -1,12 +1,32 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
     <router-view/>
+    <hr>
+    <router-link v-for="item in routes" :key="item.name" :to="item.path">
+      {{ item.meta.title }}
+    </router-link>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      routes: []
+    }
+  },
+  mounted() {
+    this.transRouteToNav()
+  },
+  methods: {
+    transRouteToNav() {
+      const routes = this.$router.options.routes.filter(item => item.meta !== null && item.meta !== undefined)
+      routes.sort((a, b) => a.meta.position - b.meta.position)
+      this.routes = routes
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -15,18 +35,5 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>
