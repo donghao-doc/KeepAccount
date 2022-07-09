@@ -3,6 +3,7 @@ import VueRouter, { RouteConfig } from 'vue-router';
 import DetailView from '@/views/DetailView.vue';
 import ChartView from '@/views/ChartView.vue';
 import ManagerView from '@/views/ManagerView.vue'
+import NotFound from '@/views/NotFound.vue'
 
 Vue.use(VueRouter);
 
@@ -28,6 +29,11 @@ const routes: Array<RouteConfig> = [
     name: 'ManagerView',
     component: ManagerView,
     meta: {title: '资产管家', position: 3}
+  },
+  {
+    path: '*',
+    name: 'NotFound',
+    component: NotFound
   }
 ];
 
