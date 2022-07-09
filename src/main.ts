@@ -6,8 +6,14 @@ import store from './store';
 
 Vue.config.productionTip = false;
 
+import 'vant/lib/button/style';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import Button from 'vant/lib/button';
+Vue.use(Button);
+
 import GlobalNav from '@/components/GlobalNav.vue';
-Vue.component(GlobalNav.name, GlobalNav)
+Vue.component(GlobalNav.name, GlobalNav);
 
 new Vue({
   router,
