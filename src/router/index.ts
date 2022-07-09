@@ -1,27 +1,38 @@
-import Vue from 'vue'
-import VueRouter, { RouteConfig } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import Vue from 'vue';
+import VueRouter, { RouteConfig } from 'vue-router';
+import DetailView from '@/views/DetailView.vue';
+import ChartView from '@/views/ChartView.vue';
+import ManagerView from '@/views/ManagerView.vue'
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    redirect: '/detail'
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/detail',
+    name: 'DetailView',
+    component: DetailView,
+    meta: {title: '明细', position: 1}
+  },
+  {
+    path: '/chart',
+    name: 'ChartView',
+    component: ChartView,
+    meta: {title: '报表', position: 2}
+  },
+  {
+    path: '/manager',
+    name: 'ManagerView',
+    component: ManagerView,
+    meta: {title: '资产管家', position: 3}
   }
-]
+];
 
 const router = new VueRouter({
   routes
-})
+});
 
-export default router
+export default router;
