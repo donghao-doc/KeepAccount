@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <div id="notFound"></div>
     <van-button
         type="primary" text="首页" color="#99CCFF" icon="wap-home" plain round

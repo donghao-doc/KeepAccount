@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="nav-container">
     <router-link
       v-for="item in routes" :key="item.name"
       :to="item.path" class="item"
@@ -47,14 +47,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.container {
-  // border: 1px solid red;
+.nav-container {
+  height: 60px;
   color: #000;
   font-size: 16px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   position: relative;
-  margin-top: 100px; // 删掉
 }
 
 .item {
