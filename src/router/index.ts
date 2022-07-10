@@ -17,25 +17,25 @@ const routes: Array<RouteConfig> = [
     path: '/detail',
     name: 'DetailView',
     component: DetailView,
-    meta: {title: '明细', position: 1}
+    meta: {title: '明细', position: 1, icon: 'balance-list'}
   },
   {
     path: '/chart',
     name: 'ChartView',
     component: ChartView,
-    meta: {title: '报表', position: 2}
+    meta: {title: '报表', position: 2, icon: 'cluster'}
   },
   {
     path: '/manager',
     name: 'ManagerView',
     component: ManagerView,
-    meta: {title: '资产管家', position: 3}
+    meta: {title: '资产', position: 3, icon: 'gold-coin'}
   },
   {
     path: '/setting',
     name: 'SettingView',
     component: SettingView,
-    meta: {title: '设置', position: 4}
+    meta: {title: '设置', position: 4, icon: 'setting'}
   },
   {
     path: '*',

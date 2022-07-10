@@ -6,12 +6,13 @@ import store from './store';
 
 Vue.config.productionTip = false;
 
+// Vant UI
 import 'vant/lib/button/style';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import Button from 'vant/lib/button';
+import { Button, Icon } from 'vant';
 Vue.use(Button);
+Vue.use(Icon)
 
+// 全局组件
 import GlobalNav from '@/components/GlobalNav.vue';
 Vue.component(GlobalNav.name, GlobalNav);
 
